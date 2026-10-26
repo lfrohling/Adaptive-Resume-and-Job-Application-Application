@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "Job": {
+      "title": "Job",
+      "description": "A job opportunity or experience",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "company": { "type": "string" },
+        "description": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["title", "company", "userId"]
+    },
+    "Resume": {
+      "title": "Resume",
+      "description": "User resume draft",
+      "type": "object",
+      "properties": {
+        "content": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["content", "userId"]
+    },
+    "CoverLetter": {
+      "title": "CoverLetter",
+      "description": "Cover letter draft",
+      "type": "object",
+      "properties": {
+        "content": { "type": "string" },
+        "userId": { "type": "string" },
+        "jobTargetId": { "type": "string" }
+      },
+      "required": ["content", "userId"]
+    }
+  },
+  "firestore": {
+    "jobs/{jobId}": {
+      "schema": { "$ref": "Job" },
+      "description": "Collection of jobs"
+    },
+    "resumes/{resumeId}": {
+      "schema": { "$ref": "Resume" },
+      "description": "Collection of resumes"
+    },
+    "coverLetters/{coverLetterId}": {
+      "schema": { "$ref": "CoverLetter" },
+      "description": "Collection of cover letters"
+    }
+  }
+}

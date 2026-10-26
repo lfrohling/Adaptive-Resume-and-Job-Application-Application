@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen font-sans;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Clean Print Styles for PDF Generation */
+@media print {
+  @page {
+    margin: 12mm 14mm;
+    size: letter portrait;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+
+  /* Hide all app chrome during print */
+  .no-print,
+  nav,
+  header,
+  aside,
+  button,
+  .toast-container {
+    display: none !important;
+  }
+
+  /* Make print container pristine */
+  #resume-document-container {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  #resume-document-container, #resume-document-container * {
+      background-color: #ffffff !important;
+      color: #111827 !important;
+  }
+
+  .print-page-break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #111827 !important;
+    text-decoration: none !important;
+  }
+}

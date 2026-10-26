@@ -1,0 +1,6 @@
+{
+  "name": "OmniBase Resume Engine - Master Dossier & Adaptive Job Tailor",
+  "description": "Comprehensive career knowledge base that synthesizes hyper-targeted resumes for each job application and continuously harvests new skills and impact metrics back into the master document.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
