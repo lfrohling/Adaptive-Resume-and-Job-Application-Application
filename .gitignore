@@ -1,0 +1,22 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Local Firebase config with real API keys
+firebase-applet-config.json
+firebase_applet_config.xml
+
+# Compressed project exports
+project.tar.gz
+*.tar.gz
+
+# AI Studio uploaded attachments & local personal files
+public/assets/aistudio/
+data/snapshots/
+*.tar.gz
+.aistudio/
